@@ -42,6 +42,11 @@ li{
     text-align: -webkit-match-parent;
 }
 
+a{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
 /* 모바일 화면 시작 */
 /* 메인 시작 */
 .p-index{
@@ -106,6 +111,11 @@ li{
             font-size: 3.73333333333vw;
             text-decoration: none;
         }
+        .p-index_nav-link:hover{
+            transition: 0.5s;
+            filter: brightness(0.7);
+        }
+
     .p-index_sns{
         display: -webkit-box;
         display: -ms-flexbox;
@@ -122,6 +132,11 @@ li{
             display: block;
             width: 8.53333333333vw;
         }
+        .p-index_sns-link img:hover{
+            filter: opacity(0.7);
+            transition: 0.5s;
+        }
+
     .p-index_txt05{
         width: 64.2666666667vw;
         margin: 5.8666666667vw auto 0;
@@ -130,25 +145,150 @@ li{
         width: 73.3333333333vw;
         margin: 0 auto 12vw;
     }
-        .p-index_bnr:nth-child(n+2){
+        .p-index_bnr+.p-index_bnr{
             margin-top: 4vw;
         }
+        .p-index_bnr a img:hover{
+            filter: opacity(0.7);
+            transition: 0.5s;
+        }
+
 /* 푸터 시작 */
-.footer{
+.footer.black{
     background-color: black;
     color: white;
+}
+.footer{
     padding: 34px 0 82px 0;
     line-height: 1.75;
 }
+
     .I-foote-mvtk{
         width: 73.3333333333vw;
         margin: 0 auto 5.3333333333vw;
     }
+    .I-foote-mvtk_item+.I-foote-mvtk_item{
+        margin-top: 5.3333333333vw;
+    }
         .I-foote-mvtk_item{
-            margin-top: 5.3333333333vw;
+            display: block;
         }
-    
 
+        .I-foote-mvtk_item picture{
+            transition: 0.5s;
+        }
+        .I-foote-mvtk_item picture:hover{
+            filter: brightness(0.7);
+        }
+
+            .I-foote-mvtk_link{
+                transition: opacity 3s;
+            }
+            .I-foote-mvtk_link img{
+                vertical-align: top;
+            }
+
+    
+    .footer-container{
+        width: 716px;
+        margin: 0 auto;
+    }
+        .footer-ttl{
+            width: 185px;
+            margin: 0 auto;
+        }
+        .footer.black ._wh{
+            display: none;
+        }
+        .footer-snsnavi, .footer-corpnavi{
+            padding: 0;
+            margin: 0;
+        }
+            .footer-snsnavi-item, .footer-corpnavi-item{
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+            }
+        .footer-snsnavi{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px 0 34px 0;
+        }
+            .footer-snsnavi-item{
+                width: 6.5%;
+            }
+            .footer-snsnavi-item a{
+                display: block;
+                line-height: 0;
+            }
+            .footer-snsnavi-item a img{
+                width: 100%;
+                transition: 0.5s;
+            }
+            .footer-snsnavi-item a img:hover{
+                filter: brightness(0.7);
+            }
+        
+        .footer-corpnavi{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+            .footer.black .footer-corpnavi-item a{
+                color: #fff;
+            }
+            .footer-corpnavi-item a:before{
+                content: ">";
+                margin: 0 5px 0 0;
+                font-size: 14px;
+                line-height: 1;
+            }
+            .footer-corpnavi-item{
+                margin: 0 7px;
+            }
+            .footer-corpnavi-item a{
+                font-size: 11px;
+                text-decoration: none;
+                letter-spacing: 1px;
+                display: flex;
+                align-items: center;
+            }
+        .footer-copyright{
+            font-size: 11px;
+            text-align: center;
+            letter-spacing: 1px;
+            margin: 14px 0 30px 0;
+        }
+        .footer-logo{
+            width: 80px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+            .footer-logo a{
+                display: block;
+                line-height: 0;
+                padding: 17.89% 0 0 0;
+                position: relative;
+            }
+                .footer.black .footer-logo a span{
+                    background-image: url(https://gaga.ne.jp/common/footer_new/img/gaga_logo.png);
+                }
+                .footer-logo a span {
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    transition: 0.5s;
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                }
+                .footer-logo a span:hover{
+                    filter: brightness(0.7);
+                }
 
 
 
@@ -264,14 +404,52 @@ li{
             width: auto;
             margin: 4.39238653% auto 5.1244509517%;
         }
+
+            .p-index_bnr+.p-index_bnr{
+                margin-top: 0;
+            }
             .p-index_bnr{
                 width: 25.4758418741vw;
             }
-            .p-index_bnr:nth-child(n+2){
-                margin-top: 0;
-            }
+                .p-index_bnr-link{
+                    display: block;
+                    -webkit-transition: opacity .3s;
+                    transition: opacity .3s;
+                }
+                    .p-index_bnr-link img{
+                        vertical-align: top;
+                    }
+    
     .footer{
-        padding: 44px 0 56px 0;
+        padding: 36px 0 80px 0;
     }
+        .I-foote-mvtk{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 11px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: auto;
+        margin: 0 auto 30px;
+        }
+            .I-foote-mvtk_item+.I-foote-mvtk_item{
+                margin-top: 0;
+                width: 399px;
+            } 
+            .I-foote-mvtk_item{
+                width: 278px;
+            }
+
+        .footer-container{
+            width: 640px;
+            box-sizing: border-box;
+        }
+            .footer-snsnavi{
+                margin: 30px 0 48px 0;
+            }
 
 }
